@@ -1,0 +1,20 @@
+﻿using AutoMapper;
+using Mango.Services.CouponAPI.Models.Dto;
+using Mango.Services.CouponAPI.Models;
+
+namespace Mango.Services.CouponAPI
+{
+	public class MapperConfig
+	{
+		public static MapperConfiguration RegisterMaps()
+		{
+			var mapperConfig = new MapperConfiguration(config =>
+			{
+				config.CreateMap<CouponDto, Coupon>();
+				config.CreateMap<Coupon, CouponDto>();
+			});
+
+			return mapperConfig;
+		}
+	}
+}
